@@ -141,6 +141,13 @@ def get_flowcell(html_body):
 
     return fcid_text
 
+def get_minknow(html_body):
+    # data in 3rd div tag instance
+    tmp = html_body.find_all('div', {'class':"config-section"})[3]
+    # extract version text
+    vers = tmp.find('div', class_='title', string='MinKNOW').find_next_sibling('div').text
+    return vers
+
 def create_obs_row(_soup):
     # extract body contents - everything should be in here
     _body = _soup.body
@@ -160,6 +167,7 @@ def create_obs_row(_soup):
     runsum = get_runsum(_body)
     obs_row['Data_output_(Gb)'] = runsum['Data Output']
     obs_row['N50_(kb)'] = runsum['N50']
+    obs_row['MinKNOW Version'] = get_minknow(_body)
 
     return obs_row
 
@@ -170,9 +178,13 @@ def format_row(_row):
             'PROM_ID',
             'Flow_Cell_ID',
             'Data_output_(Gb)',
-            'N50_(kb)']
+            'N50_(kb)',
+            'MinKNOW Version'
+            ]
     values = list( map(_row.get, keys) )
     return('\t'.join([str(x) for x in values]))
+
+    obs_row['MinKNOW Version'] = get_minknow(_body)
 
 
 # user input
@@ -198,7 +210,7 @@ for x in files:
     row = create_obs_row(soup)
     _rows.append(row)
 
-header = '\t'.join(['Experiment_Name','Sample_Name','Run_Date','PROM_ID','Flow_Cell_ID','Data_output_(Gb)','N50_(kb)'])
+header = '\t'.join(['Experiment_Name','Sample_Name','Run_Date','PROM_ID','Flow_Cell_ID','Data_output_(Gb)','N50_(kb)', 'MinKNOW Version'])
 
 if len(_rows) > 0:
     print(header)
