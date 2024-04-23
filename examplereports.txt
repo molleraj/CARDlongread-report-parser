@@ -1,0 +1,6 @@
+/data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/report_PAM05248_20230419_1626_3e4b90e3.html
+/data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/report_PAQ10411_20230705_1430_6d7d7498.html
+/data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/report_PAQ49438_20230705_1434_feac4945.html
+/data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/report_PAS59162_20240229_1507_8f9bb6f9.html
+/data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/report_PAU56559_20240213_1201_dc4eef90.html
+/data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/report_PAW25117_20240312_1133_1aa4ac09.html
