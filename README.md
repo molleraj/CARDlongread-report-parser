@@ -1,4 +1,6 @@
-# Long Read HTML Report Parsing
+# Long Read Sequencing Report Parsing
+
+These Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet.
 
 To clone from GitHub:
 ```bash
