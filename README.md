@@ -59,5 +59,7 @@ python3 longread_extract_from_json.py --filelist example_json_reports.txt --outp
 python3 longread_extract_from_json.py --json_dir /data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/ --output example_output.tsv
 
 # Make sequencing QC analytics spreadsheet from above QC output table (example_output.tsv)
-python3 longread_extract_summary_statistics.py -input example_output.tsv -output example_summary_spreadsheet.xlsx -plot_title "PPMI tutorial example" 
+python3 longread_extract_summary_statistics.py -input example_output.tsv -output example_summary_spreadsheet.xlsx -plot_title "PPMI tutorial example"
 ```
+
+Example sequencing QC visualizations from summary spreadsheet:
