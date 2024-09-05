@@ -1,6 +1,8 @@
 # Long Read Sequencing Report Parsing
 
-These Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet.
+These Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet. They take run output JSON files as input and pull sequencing statistics from exact locations in each JSON hierarchical data structure. The scripts have been written to handle JSON files from MinKNOW version 24.02.19. Please report any bugs in the Issues tab to further improve the parser.
+
+## Usage
 
 ```longread_extract_from_json.py``` takes a list of Oxford Nanopore sequencing report JSON files as inputs and returns a table with the following fields per JSON:
 
@@ -38,6 +40,7 @@ optional arguments:
   -run_cutoff RUN_CUTOFF
                         Minimum data output per flow cell run to include (optional, 1 Gb default)
 ```
+## Tutorial
 
 To clone from GitHub and do a test run:
 ```bash
