@@ -48,6 +48,10 @@ A reconnection is the second part of a run after a flow cell is disconnected and
 
 A recovery run is conducted when either insufficient library is prepared for three full loads (over three days) or when active pores substantially decrease from pre-sequencing checks after the first load. Library is recovered by slow aspiration from the flow cell sample port itself. Library is generally recovered after the first load (often due to active pore drop off) and either loaded onto a new flow cell or to the same flow cell for a subsequent load. 
 
+A top up run is conducted on a new flow cell when an experiment has not yielded the desired 90 Gbp (30x coverage) from the initial run (and reconnections/recoveries where applicable). Top up runs are conducted either with initial library if there is sufficient library for more than three loads or with new library if not.
+
+Top up runs are labeled with the suffix _topup and recovery runs are labeled with _recovery in the sample name column
+
 Example data visualizations corresponding to data snippets shown earlier:
 <br></br>
 Total per flow cell output violin plot with embedded box plot and displayed data points:
