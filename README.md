@@ -40,7 +40,7 @@ optional arguments:
   --output OUTPUT_FILE  Output long read JSON report summary table in tab-delimited format
 ```
 
-```longread_extract_summary_statistics.py``` then generates a spreadsheet from the output table of ```longread_extract_from_json.py``` containing a sequencing statistics summary table and both violin plot and scatter plot visualizations of data output, read N50, and starting active pores (active pores after starting sequencing). Individual runs (lines in TSV table) are highlighted indicating whether they are an initial run, top up, recovery, or reconnection.
+```longread_extract_summary_statistics.py``` then generates a spreadsheet from the output table of ```longread_extract_from_json.py``` containing a sequencing statistics summary table and both violin plot and scatter plot visualizations of data output, read N50, and starting active pores (active pores after starting sequencing). Individual runs (lines in TSV table) are highlighted indicating whether they are an initial run, top up, reconnection, or recovery.
 
 Example data visualizations corresponding to data snippets shown earlier:
 <br></br>
