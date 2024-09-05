@@ -44,9 +44,12 @@ optional arguments:
 
 Example data visualizations corresponding to data snippets shown earlier:
 
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/f576c444-65c7-4c66-9a1a-a6a7ebdfa6e4">
+
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/f576c444-65c7-4c66-9a1a-a6a7ebdfa6e4">
+
 
 <img width="720" alt="image" src="https://github.com/user-attachments/assets/5e4c3038-d747-4373-b59d-dde6db8dabf3">
+
 
 Example usage (```python longread_extract_summary_statistics.py -h```):
 ```
