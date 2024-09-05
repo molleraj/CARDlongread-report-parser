@@ -67,15 +67,17 @@ To clone from GitHub and do a test run:
 git clone https://github.com/molleraj/longread-report-parser.git
 cd longread-report-parser
 
-# Generate list of files using `find`
-find /data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/ -type f -name '*.json' > example_json_reports.txt
+# Test on pregenerated set of 50 random PPMI JSON files (use exact file provided)
+# Random JSON file set generated like so with Linux coreutils shuf (shuffle) command
+# shuf -n 50 full_PPMI_json_report_list_090524.txt > random_50_test_PPMI_json_paths_090524.txt
+# random_50_test_PPMI_json_paths_090524.txt included in repository as example_json_reports.txt
 
-# Execute with file list of html reports (one per line):
+# Execute with file list of json reports (one per line):
 python3 longread_extract_from_json.py --filelist example_json_reports.txt --output example_output.tsv
 
 # Alternatively, execute on all html files within a directory
 # (does not descend into subdirectories)
-python3 longread_extract_from_json.py --json_dir /data/CARDPB/data/PPMI/SEQ_REPORTS/example_reports/ --output example_output.tsv
+python3 longread_extract_from_json.py --json_dir /data/CARDPB/data/PPMI/SEQ_REPORTS/example_json_reports/ --output example_output.tsv
 
 # Make sequencing QC analytics spreadsheet from above QC output table (example_output.tsv)
 python3 longread_extract_summary_statistics.py -input example_output.tsv -output example_summary_spreadsheet.xlsx -plot_title "PPMI tutorial example"
