@@ -4,9 +4,19 @@ These Python scripts automate the process of collecting key sequencing statistic
 
 ## Usage
 
-```longread_extract_from_json.py``` takes a list of Oxford Nanopore sequencing report JSON files as inputs and returns a table with the following fields per JSON:
+```longread_extract_from_json.py``` takes a list of Oxford Nanopore sequencing report JSON files as inputs (or a directory containing all JSON files to analyze) and returns a table with the following fields per JSON:
 
 Experiment Name, Sample Name, Run Date, PROM ID, Flow Cell ID, Data output (Gb), N50 (kb), MinKNOW Version, Passed Modal Q Score, Failed Modal Q Score, Starting Active Pores, Second Pore Count
+
+Below is sample output from the script:
+```
+Experiment Name	Sample Name	Run Date	PROM ID	Flow Cell ID	Data output (Gb)	N50 (kb)	MinKNOW Version	Passed Modal Q Score	Failed Modal Q Score	Starting Active Pores
+Chile_404	Chile_404	2024-05-14	PC24B302	PAW33034	141.083	23.39	24.02.10	NA	NA	7465
+Chile_406	Chile_406	2024-05-01	PC24B302	PAW73369	131.699	22.79	24.02.10	NA	NA	7339
+Chile_509	Chile_509	2024-05-14	PC24B302	PAW61512	117.861	17.12	24.02.10	NA	NA	7515
+Chile_511	Chile_511	2024-05-08	PC24B302	PAW71368	133.097	20.69	24.02.10	NA	NA	7226
+Chile_516	Chile_516	2024-05-01	PC24B302	PAW71977	129.544	23.63	24.02.10	NA	NA	7516
+```
 
 The file list should contain paths to each report on each line, like so:
 ```
