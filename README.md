@@ -94,9 +94,15 @@ python3 longread_extract_from_json.py --json_dir /data/CARDPB/data/PPMI/SEQ_REPO
 python3 longread_extract_summary_statistics.py -input example_output.tsv -output example_summary_spreadsheet.xlsx -plot_title "PPMI tutorial example"
 ```
 
-Example sequencing QC visualizations from summary spreadsheet:
-<br></br>
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/5fccccb4-71ca-484b-904f-414fccf2e12b">
+Example sequencing QC visualizations from tutorial summary spreadsheet:
 <br></br>
 <br></br>
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/5fccccb4-71ca-484b-904f-414fccf2e12b">
+<br></br>
+<br></br>
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/67643dc9-5011-4b8d-ba54-d5551eb774eb">
+<br></br>
+Per run data output vs. starting active pore scatter plot with run type annotated by color and cutoffs provided for starting active pores (red - less than 5000 pores for ONT warranty return, green - 6500 pores or higher for internal QC) and data output (gray - desired output of 30X human genome coverage or 90 Gbp sequencing output).
+<br></br>
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/6cf2041b-429f-45ed-b759-658480fdc943">
 <br></br>
