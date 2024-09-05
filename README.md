@@ -1,6 +1,6 @@
 # Long Read Sequencing Report Parsing
 
-These Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet. They take run output JSON files as input and pull sequencing statistics from exact locations in each JSON hierarchical data structure. The scripts have been written to handle JSON files from MinKNOW version 24.02.19. Please report any bugs in the Issues tab to further improve the parser.
+These Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet. They take run output JSON files as input and pull sequencing statistics from exact locations in each JSON hierarchical data structure. The scripts have been written to handle JSON files from MinKNOW version 24.02.19 and earlier. Please report any bugs in the Issues tab to further improve the parser.
 
 ## Usage
 
