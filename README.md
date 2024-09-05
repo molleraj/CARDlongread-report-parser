@@ -46,6 +46,8 @@ An initial run corresponds either to a sequencing run that went through three fu
 
 A reconnection is the second part of a run after a flow cell is disconnected and reconnected, as described above. Reconnections are identified from lines in the JSON parser output TSV that have the same sample name and same flow cell ID.
 
+A recovery run is conducted when either insufficient library is prepared for three full loads (over three days) or when active pores substantially decrease from pre-sequencing checks after the first load. Library is recovered by slow aspiration from the flow cell sample port itself. Library is generally recovered after the first load (often due to active pore drop off) and either loaded onto a new flow cell or to the same flow cell for a subsequent load. 
+
 Example data visualizations corresponding to data snippets shown earlier:
 <br></br>
 Total per flow cell output violin plot with embedded box plot and displayed data points:
