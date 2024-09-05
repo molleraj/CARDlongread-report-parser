@@ -52,6 +52,7 @@ Example data visualizations corresponding to data snippets shown earlier:
 
 
 Example usage (```python longread_extract_summary_statistics.py -h```):
+
 ```
 usage: longread_extract_summary_statistics.py [-h] [-input INPUT_FILE] [-output OUTPUT_FILE] [-plot_title PLOT_TITLE] [--plot_cutoff | --no-plot_cutoff] [-run_cutoff RUN_CUTOFF]
 
