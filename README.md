@@ -50,7 +50,7 @@ A recovery run is conducted when either insufficient library is prepared for thr
 
 A top up run is conducted on a new flow cell when an experiment has not yielded the desired 90 Gbp (30x coverage) from the initial run (and reconnections/recoveries where applicable). Top up runs are conducted either with initial library if there is sufficient library for more than three loads or with new library if not.
 
-Top up runs are labeled with the suffix _topup and recovery runs are labeled with _recovery in the sample name column
+Top up runs are labeled with the suffix _topup and recovery runs are labeled with the suffix _recovery in the sample name column.
 
 Example data visualizations corresponding to data snippets shown earlier:
 <br></br>
