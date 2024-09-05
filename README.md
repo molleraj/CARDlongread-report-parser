@@ -42,6 +42,10 @@ optional arguments:
 
 ```longread_extract_summary_statistics.py``` then generates a spreadsheet from the output table of ```longread_extract_from_json.py``` containing a sequencing statistics summary table and both violin plot and scatter plot visualizations of data output, read N50, and starting active pores (active pores after starting sequencing). Individual runs (lines in TSV table) are highlighted indicating whether they are an initial run, top up, reconnection, or recovery.
 
+An initial run corresponds either to a sequencing run that went through three full loads successfully (one every 24 hours) or to the first part of a full sequencing run where the flow cell was later reconnected at a distinct position (e.g., 1E to 3C) or temporarily disconnected and reconnected at the same position (e.g., 1E).
+
+A reconnection is the second part of a run after a flow cell is disconnected and reconnected, as described above. Reconnections are identified from lines in the JSON parser output TSV that have the same sample name and same flow cell ID.
+
 Example data visualizations corresponding to data snippets shown earlier:
 <br></br>
 Total per flow cell output violin plot with embedded box plot and displayed data points:
