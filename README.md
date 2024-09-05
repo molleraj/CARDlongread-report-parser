@@ -44,7 +44,11 @@ optional arguments:
 
 Example data visualizations corresponding to data snippets shown earlier:
 <br></br>
+Total per flow cell output violin plot with embedded box plot and displayed data points:
+<br></br>
 <img width="720" alt="image" src="https://github.com/user-attachments/assets/f576c444-65c7-4c66-9a1a-a6a7ebdfa6e4">
+<br></br> 
+Per run data output vs. starting active pore scatter plot with run type annotated by color and cutoffs provided for starting active pores (red - less than 5000 pores for ONT warranty return, green - 6500 pores or higher for internal QC) and data output (desired output of 30X human genome coverage or 90 Gbp sequencing output).
 <br></br>
 <img width="720" alt="image" src="https://github.com/user-attachments/assets/5e4c3038-d747-4373-b59d-dde6db8dabf3">
 <br></br>
@@ -91,3 +95,8 @@ python3 longread_extract_summary_statistics.py -input example_output.tsv -output
 ```
 
 Example sequencing QC visualizations from summary spreadsheet:
+<br></br>
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/5fccccb4-71ca-484b-904f-414fccf2e12b">
+<br></br>
+<br></br>
+<br></br>
