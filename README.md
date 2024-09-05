@@ -1,6 +1,6 @@
 # NIA CARD Long Read Sequencing Report Parsing and Visualization
 
-These Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet. They take run output JSON files as input and pull sequencing statistics from exact locations in each JSON hierarchical data structure. The scripts have been written to handle JSON files from MinKNOW version 24.02.19 and earlier. Please report any bugs in the Issues tab to further improve the parser.
+The NIA CARD Long-Read Sequencing group sequences some 30-50 human genomes per week from brain and blood genomic DNA. Given these samples both often belong to larger cohorts (more than 30-50 samples), batch to batch variation is inevitable, and Oxford Nanopore Technologies has steadily modified sequencing library chemistry, flow cells, instrument software, and basecalling models, regular sequencing quality control is critical to examine how our sequencing efforts change over time. The included Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet. They take run output JSON files as input and pull sequencing statistics from exact locations in each JSON hierarchical data structure. The scripts have been written to handle JSON files from MinKNOW version 24.02.19 and earlier. Please report any bugs in the Issues tab to further improve the parser.
 
 ## Usage
 
@@ -96,13 +96,15 @@ python3 longread_extract_summary_statistics.py -input example_output.tsv -output
 
 Example sequencing QC visualizations from tutorial summary spreadsheet:
 <br></br>
+Per run output violin plot with embedded box plot and displayed data points, plus run type annotated by point color:
 <br></br>
 <img width="720" alt="image" src="https://github.com/user-attachments/assets/5fccccb4-71ca-484b-904f-414fccf2e12b">
 <br></br>
+Per run starting active pores violin plot with embedded box plot and displayed data points, plus run type annotated by point color:
 <br></br>
 <img width="720" alt="image" src="https://github.com/user-attachments/assets/67643dc9-5011-4b8d-ba54-d5551eb774eb">
 <br></br>
-Per run data output vs. starting active pore scatter plot with run type annotated by color and cutoffs provided for starting active pores (red - less than 5000 pores for ONT warranty return, green - 6500 pores or higher for internal QC) and data output (gray - desired output of 30X human genome coverage or 90 Gbp sequencing output).
+Per run data output vs. starting active pore scatter plot with run type annotated by point color and cutoffs provided for starting active pores (red - less than 5000 pores for ONT warranty return, green - 6500 pores or higher for internal QC) and data output (gray - desired output of 30X human genome coverage or 90 Gbp sequencing output).
 <br></br>
 <img width="720" alt="image" src="https://github.com/user-attachments/assets/6cf2041b-429f-45ed-b759-658480fdc943">
 <br></br>
