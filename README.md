@@ -2,6 +2,11 @@
 
 These Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet.
 
+```longread_extract_from_json.py``` takes a list of Oxford Nanopore sequencing report JSON files as inputs and returns a table with the following fields per JSON:
+Experiment Name, Sample Name, Run Date, PROM ID, Flow Cell ID, Data output (Gb), N50 (kb), MinKNOW Version, Passed Modal Q Score, Failed Modal Q Score, Starting Active Pores, Second Pore Count
+
+```longread_extract_summary_statistics.py```
+
 To clone from GitHub:
 ```bash
 # Download this repo
