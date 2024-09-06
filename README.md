@@ -40,7 +40,7 @@ optional arguments:
   --output OUTPUT_FILE  Output long read JSON report summary table in tab-delimited format
 ```
 
-```longread_extract_summary_statistics.py``` then generates a spreadsheet from the output table of ```longread_extract_from_json.py``` containing a sequencing statistics summary table and both violin plot and scatter plot visualizations of data output, read N50, and starting active pores (active pores after starting sequencing). Individual runs (lines in TSV table) are highlighted indicating whether they are an initial run, top up, reconnection, or recovery.
+```longread_extract_summary_statistics.py``` then generates a spreadsheet from the output table of ```longread_extract_from_json.py``` containing a sequencing statistics summary table and both violin plot and scatter plot visualizations of data output, read N50, and starting active pores (active pores after starting sequencing). Violin plots are provided separately for output (Gbp) per run (corresponding to each line in the input TSV table), per flow cell, and per experiment. Individual runs (lines in TSV table) are highlighted indicating whether they are an initial run, top up, reconnection, or recovery.
 
 Sequencing runs are typically conducted over 72 hours, with one 20 fmol library load every 24 hours.
 
