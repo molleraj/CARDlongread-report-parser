@@ -2,6 +2,7 @@
 # long read sequencing report JSON parser
 # output fields are Experiment Name, Sample Name, Run Date, PROM ID, Flow Cell ID, Data output (Gb), N50 (kb), MinKNOW Version
 # look for Q score in the future and possibly also total reads
+import glob
 import json
 import pandas as pd
 import numpy as np
