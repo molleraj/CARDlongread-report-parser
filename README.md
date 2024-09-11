@@ -4,7 +4,7 @@ The NIA CARD Long-Read Sequencing group sequences some 30-50 human genomes per w
 
 ## Usage
 
-```longread_extract_from_json.py``` takes a list of Oxford Nanopore sequencing report JSON files as inputs (or a directory containing all JSON files to analyze) and returns a table with the following fields per JSON:
+```CARDlongread_extract_from_json.py``` takes a list of Oxford Nanopore sequencing report JSON files as inputs (or a directory containing all JSON files to analyze) and returns a table with the following fields per JSON:
 
 Experiment Name, Sample Name, Run Date, PROM ID, Flow Cell ID, Data output (Gb), N50 (kb), MinKNOW Version, Passed Modal Q Score, Failed Modal Q Score, Starting Active Pores, Second Pore Count
 
@@ -27,9 +27,9 @@ The file list should contain paths to each report on each line, like so:
 /data/CARD_AUX/LRS_temp/CHILE/SEQ_REPORTS/Chile_516/PAW71977/other_reports_PAW71977/report_PAW71977_20240501_1947_c6a80210.json
 ```
 
-Example usage (```python longread_extract_from_json.py -h```):
+Example usage (```python CARDlongread_extract_from_json.py -h```):
 ```
-usage: longread_extract_from_json.py [-h] [--json_dir JSON_DIR] [--filelist FILELIST] [--output OUTPUT_FILE]
+usage: CARDlongread_extract_from_json.py [-h] [--json_dir JSON_DIR] [--filelist FILELIST] [--output OUTPUT_FILE]
 
 Extract data from long read JSON report
 
@@ -40,7 +40,7 @@ optional arguments:
   --output OUTPUT_FILE  Output long read JSON report summary table in tab-delimited format
 ```
 
-```longread_extract_summary_statistics.py``` then generates a spreadsheet from the output table of ```longread_extract_from_json.py``` containing a sequencing statistics summary table and both violin plot and scatter plot visualizations of data output, read N50, and starting active pores (active pores after starting sequencing). Violin plots are provided separately for output (Gbp) per run (corresponding to each line in the input TSV table), per flow cell, and per experiment. Individual runs (lines in TSV table) are highlighted indicating whether they are an initial run, top up, reconnection, or recovery.
+```CARDlongread_extract_summary_statistics.py``` then generates a spreadsheet from the output table of ```CARDlongread_extract_from_json.py``` containing a sequencing statistics summary table and both violin plot and scatter plot visualizations of data output, read N50, and starting active pores (active pores after starting sequencing). Violin plots are provided separately for output (Gbp) per run (corresponding to each line in the input TSV table), per flow cell, and per experiment. Individual runs (lines in TSV table) are highlighted indicating whether they are an initial run, top up, reconnection, or recovery.
 
 Sequencing runs are typically conducted over 72 hours, with one 20 fmol library load every 24 hours.
 
@@ -64,10 +64,10 @@ Per run data output vs. starting active pore scatter plot with run type annotate
 <br></br>
 <img width="720" alt="image" src="https://github.com/user-attachments/assets/5e4c3038-d747-4373-b59d-dde6db8dabf3">
 <br></br>
-Example usage (```python longread_extract_summary_statistics.py -h```):
+Example usage (```python CARDlongread_extract_summary_statistics.py -h```):
 
 ```
-usage: longread_extract_summary_statistics.py [-h] [-input INPUT_FILE] [-output OUTPUT_FILE] [-plot_title PLOT_TITLE] [--plot_cutoff | --no-plot_cutoff] [-run_cutoff RUN_CUTOFF]
+usage: CARDlongread_extract_summary_statistics.py [-h] [-input INPUT_FILE] [-output OUTPUT_FILE] [-plot_title PLOT_TITLE] [--plot_cutoff | --no-plot_cutoff] [-run_cutoff RUN_CUTOFF]
 
 This program gets summary statistics from long read sequencing report data.
 
@@ -87,8 +87,8 @@ optional arguments:
 To clone from GitHub and do a test run:
 ```bash
 # Download this repo
-git clone https://github.com/molleraj/longread-report-parser.git
-cd longread-report-parser
+git clone https://github.com/molleraj/CARDlongread-report-parser.git
+cd CARDlongread-report-parser
 
 # Test on pregenerated set of 50 random PPMI JSON files (use exact file provided)
 # Random JSON file set generated like so with Linux coreutils shuf (shuffle) command
@@ -96,14 +96,14 @@ cd longread-report-parser
 # random_50_test_PPMI_json_paths_090524.txt included in repository as example_json_reports.txt
 
 # Execute with file list of json reports (one per line):
-python3 longread_extract_from_json.py --filelist example_json_reports.txt --output example_output.tsv
+python3 CARDlongread_extract_from_json.py --filelist example_json_reports.txt --output example_output.tsv
 
 # Alternatively, execute on all html files within a directory
 # (does not descend into subdirectories)
-python3 longread_extract_from_json.py --json_dir /data/CARDPB/data/PPMI/SEQ_REPORTS/example_json_reports/ --output example_output.tsv
+python3 CARDlongread_extract_from_json.py --json_dir /data/CARDPB/data/PPMI/SEQ_REPORTS/example_json_reports/ --output example_output.tsv
 
 # Make sequencing QC analytics spreadsheet from above QC output table (example_output.tsv)
-python3 longread_extract_summary_statistics.py -input example_output.tsv -output example_summary_spreadsheet.xlsx -plot_title "PPMI tutorial example"
+python3 CARDlongread_extract_summary_statistics.py -input example_output.tsv -output example_summary_spreadsheet.xlsx -plot_title "PPMI tutorial example"
 ```
 
 Example sequencing QC visualizations from tutorial summary spreadsheet:
