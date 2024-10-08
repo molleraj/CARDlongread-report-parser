@@ -1,4 +1,4 @@
-# NIA CARD Long Read Sequencing Report Parsing and Visualization
+# NIA CARD Long Read Sequencing Report Parsing and Visualization Dashboard
 
 The NIA CARD Long-Read Sequencing group sequences some 30-50 human genomes per week from brain and blood genomic DNA. Given these samples both often belong to larger cohorts (more than 30-50 samples), batch to batch variation is inevitable, and Oxford Nanopore Technologies has steadily modified sequencing library chemistry, flow cells, instrument software, and basecalling models, regular sequencing quality control is critical to examine how our sequencing efforts change over time. The included Python scripts automate the process of collecting key sequencing statistics from weekly and cohort-wide sequencing runs and generate QC analytics as an Excel spreadsheet. They take run output JSON files as input and pull sequencing statistics from exact locations in each JSON hierarchical data structure. The scripts have been written to handle JSON files from MinKNOW version 24.02.19 and earlier. Please report any bugs in the Issues tab to further improve the parser.
 
